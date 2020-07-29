@@ -1,12 +1,12 @@
 .container {
   width: 100%;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 24px;
   transition: transform 0.4s ease-in-out;
 }
 
 .container:hover {
   transform: scale(1.02);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .photo {
@@ -16,6 +16,7 @@
   object-fit: cover;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
+  border-radius: 24px;
 }
 
 .body {
@@ -57,7 +58,7 @@
   align-items: center;
 }
 
-.rating-icon {
+.rating_icon {
   color: rgba(235, 87, 87, 0.72);
   display: inline-block;
   margin-right: 5px;
@@ -82,4 +83,26 @@
   color: #000000;
   margin: 8px 0;
   padding: 5px 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .description span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .description p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .rating-value {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .title {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
