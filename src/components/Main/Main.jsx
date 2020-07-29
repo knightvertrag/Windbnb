@@ -4,7 +4,15 @@ import stays from "../../Data/stays.json";
 import StayCard, { IStay } from "../StayCard/StayCard";
 
 const Main = () => {
-  return <div></div>;
+  return (
+    <div className={classes.container}>
+      <div className={classes.body}>
+        {stays.map((stay) => (
+          <StayCard stay={stay} key={stay.title} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Main;
