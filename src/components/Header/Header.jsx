@@ -1,10 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import classes from "./Header.module.scss";
 import Logo from "../../assets/logo.svg";
 import { Search } from "./Search/Search";
 const Header = () => {
-  const [filterShow, setFilterShow] = useState(false);
-
   return (
     <Fragment>
       <div className={classes.header}>
