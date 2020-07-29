@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Search.module.scss";
 
 export const Search = () => {
+  const [filterShow, setFilterShow] = useState(false);
+
   return (
     <div className={classes.container}>
       <div className={classes.location}>Helsinki, Finland</div>
