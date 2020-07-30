@@ -5,7 +5,7 @@ A simpler airbnb
 Use the following command to clone the repo:
 
 ```
-git clone https://github.com/knightvertrag/React-Checkout.git
+git clone https://github.com/knightvertrag/Windbnb.git
 ```
 
 Project is bootstraped with create-react-app.
