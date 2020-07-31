@@ -1,10 +1,12 @@
+html,
 body {
   box-sizing: border-box;
+  height: 100%;
+  position: relative;
 }
 
 .content_area {
   max-width: 1250px;
   margin: 0 auto;
-  margin-top: 32px;
-  position: relative;
+  padding-top: 32px;
 }
