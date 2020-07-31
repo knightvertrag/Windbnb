@@ -1,13 +1,19 @@
 .container {
+  padding-top: 130px;
   position: absolute;
   background-color: white;
   width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
 }
 
 .categories {
   display: flex;
-  width: 100%;
   align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  //align-items: center;
 
   .location {
     flex: 1;
