@@ -8,7 +8,7 @@ const Header = () => {
   const [filterShow, setFilterShow] = useState(false);
 
   if (filterShow) {
-    return <Filter />;
+    return <Filter setFilterShow={setFilterShow} />;
   }
   return (
     <Fragment>
