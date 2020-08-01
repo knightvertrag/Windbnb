@@ -7,25 +7,52 @@
   top: 0;
   z-index: 100;
 
+  .backdrop {
+    //height: 1024px;
+  }
+
   .back {
     color: rgba(235, 87, 87, 0.9);
     width: fit-content;
     margin-left: 10%;
     padding-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.5);
+    }
   }
 }
 
 .categories {
   display: flex;
-  align-items: center;
+  //align-items: baseline;
   width: 80%;
   margin: 0 auto;
   gap: 10px;
+  margin-bottom: 20px;
   //align-items: center;
 
-  .location {
+  .location_container {
     flex: 1;
     align-items: flex-start;
+
+    .location_options {
+      margin-top: 10%;
+      font-family: "Mulish";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px;
+      color: #4f4f4f;
+
+      .option_container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
   }
   .guests {
     flex: 1;
@@ -34,6 +61,5 @@
   .btn {
     flex: 1;
     align-items: flex-start;
-    align-self: baseline;
   }
 }
