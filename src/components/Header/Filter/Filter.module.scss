@@ -7,10 +7,6 @@
   top: 0;
   z-index: 100;
 
-  .backdrop {
-    //height: 1024px;
-  }
-
   .back {
     color: rgba(235, 87, 87, 0.9);
     width: fit-content;
@@ -62,4 +58,13 @@
     flex: 1;
     align-items: flex-start;
   }
+}
+
+.backdrop {
+  position: absolute;
+  top: 500px;
+  left: 0;
+  height: 1700px;
+  width: 100%;
+  background: rgba(79, 79, 79, 0.4);
 }
