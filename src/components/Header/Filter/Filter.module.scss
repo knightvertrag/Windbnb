@@ -79,12 +79,6 @@
     opacity: 0;
     transform: translateY(-100%);
   }
-
-  50% {
-    opacity: 0.8;
-    transform: translateY(-10%);
-  }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -94,9 +88,6 @@
 @keyframes blur {
   0% {
     backdrop-filter: blur(0);
-  }
-  50% {
-    backdrop-filter: blur(5px);
   }
   100% {
     backdrop-filter: blur(10px);
