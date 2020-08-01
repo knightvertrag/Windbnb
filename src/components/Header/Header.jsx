@@ -7,11 +7,9 @@ import Filter from "./Filter/Filter";
 const Header = () => {
   const [filterShow, setFilterShow] = useState(false);
 
-  if (filterShow) {
-    return <Filter setFilterShow={setFilterShow} />;
-  }
   return (
     <Fragment>
+      {filterShow ? <Filter setFilterShow={setFilterShow} /> : ""}
       <div className={classes.header}>
         <img src={Logo} alt="logo" className={classes.logo} />
         <Search filterShow={filterShow} setFilterShow={setFilterShow} />
