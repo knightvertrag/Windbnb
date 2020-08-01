@@ -7,7 +7,7 @@
   top: 0;
   z-index: 100;
   animation-name: moveIn;
-  animation-duration: 2s;
+  animation-duration: 1s;
 
   .back {
     color: rgba(235, 87, 87, 0.9);
@@ -70,6 +70,8 @@
   width: 100%;
   //background: rgba(79, 79, 79, 0.4);
   backdrop-filter: blur(10px);
+  animation-name: blur;
+  animation-duration: 1s;
 }
 
 @keyframes moveIn {
@@ -86,5 +88,17 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes blur {
+  0% {
+    backdrop-filter: blur(0);
+  }
+  50% {
+    backdrop-filter: blur(5px);
+  }
+  100% {
+    backdrop-filter: blur(10px);
   }
 }
