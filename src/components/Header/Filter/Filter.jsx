@@ -5,7 +5,15 @@ import Guest from "./Guest/Guest";
 import Input from "./Input/Input";
 import stays from "../../../Data/stays.json";
 
-const Filter = ({ setFilterShow, adult, setAdult, child, setChild }) => {
+const Filter = ({
+  setFilterShow,
+  adult,
+  setAdult,
+  child,
+  setChild,
+  location,
+  setLocation,
+}) => {
   //Remove Duplicates in stays.json
   let filteredstays = stays.map((item) => {
     return {
@@ -18,10 +26,25 @@ const Filter = ({ setFilterShow, adult, setAdult, child, setChild }) => {
   filteredstays = new Set(filteredstays);
   filteredstays = Array.from(filteredstays).map(JSON.parse);
   //console.log(filteredstays);
+
+  const chooseLocation = (location) => {
+    let choseLocation = {
+      city: location.city,
+      country: location.country,
+    };
+    //return choseLocation;
+    console.log(choseLocation);
+    setLocation(choseLocation);
+  };
+
   const showLocations = () => {
     return filteredstays.map((item) => {
       return (
-        <div className={classes.location_options} key={item.city}>
+        <div
+          className={classes.location_options}
+          key={item.city}
+          onClick={() => chooseLocation(item)}
+        >
           <div className={classes.option_container}>
             <i className={`material-icons`}>location_on</i>
             <span
