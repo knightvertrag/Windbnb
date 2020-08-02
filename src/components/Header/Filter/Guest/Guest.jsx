@@ -9,7 +9,7 @@ const Guest = ({ adult, setAdult, child, setChild }) => {
   };
   const removeChild = () => {
     if (child.amount > 0) {
-      setAdult({ ...child, amount: child.amount - 1 });
+      setChild({ ...child, amount: child.amount - 1 });
     }
   };
   const addAdult = () => {
