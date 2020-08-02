@@ -21,7 +21,7 @@ const Filter = ({ setFilterShow, adult, setAdult, child, setChild }) => {
   const showLocations = () => {
     return filteredstays.map((item) => {
       return (
-        <div className={classes.location_options}>
+        <div className={classes.location_options} key={item.city}>
           <div className={classes.option_container}>
             <i className={`material-icons`}>location_on</i>
             <span
