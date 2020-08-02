@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
 import classes from "./Filter.module.scss";
 import Button from "../../Util/Button/Button";
+import Guest from "./Guest/Guest";
 import Input from "./Input/Input";
 import stays from "../../../Data/stays.json";
 
-const Filter = ({ setFilterShow }) => {
+const Filter = ({ setFilterShow, adult, setAdult, child, setChild }) => {
   //Remove Duplicates in stays.json
   let filteredstays = stays.map((item) => {
     return {
@@ -48,7 +49,12 @@ const Filter = ({ setFilterShow }) => {
           </div>
           <div className={classes.guests}>
             <Input type={`Guests`} placeholder={`Add Guests`} />
-            <div>options</div>
+            <Guest
+              adult={adult}
+              setAdult={setAdult}
+              child={child}
+              setChild={setChild}
+            />
           </div>
           <div className={classes.btn}>
             <Button icon={`search`}>Search</Button>
