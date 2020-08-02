@@ -3,7 +3,7 @@ import classes from "./Main.module.scss";
 import stays from "../../Data/stays.json";
 import StayCard, { IStay } from "../StayCard/StayCard";
 
-const Main = () => {
+const Main = ({ location, setLocation, adult, setAdult, child, setChild }) => {
   return (
     <div className={classes.container}>
       <div className={classes.body}>
