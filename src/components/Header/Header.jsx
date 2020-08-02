@@ -4,12 +4,22 @@ import Logo from "../../assets/logo.svg";
 import { Search } from "./Search/Search";
 import Filter from "./Filter/Filter";
 
-const Header = () => {
+const Header = ({ adult, setAdult, child, setChild }) => {
   const [filterShow, setFilterShow] = useState(false);
 
   return (
     <Fragment>
-      {filterShow ? <Filter setFilterShow={setFilterShow} /> : ""}
+      {filterShow ? (
+        <Filter
+          adult={adult}
+          setAdult={setAdult}
+          child={child}
+          setChild={setChild}
+          setFilterShow={setFilterShow}
+        />
+      ) : (
+        ""
+      )}
       <div className={classes.header}>
         <img src={Logo} alt="logo" className={classes.logo} />
         <Search filterShow={filterShow} setFilterShow={setFilterShow} />
