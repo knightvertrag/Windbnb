@@ -3,10 +3,14 @@ import classes from "./Guest.module.scss";
 
 const Guest = ({ adult, setAdult, child, setChild }) => {
   const removeAdult = () => {
-    setAdult({ ...adult, amount: adult.amount - 1 });
+    if (adult.amount > 0) {
+      setAdult({ ...adult, amount: adult.amount - 1 });
+    }
   };
   const removeChild = () => {
-    setChild({ ...child, amount: child.amount - 1 });
+    if (child.amount > 0) {
+      setAdult({ ...child, amount: child.amount - 1 });
+    }
   };
   const addAdult = () => {
     setAdult({ ...adult, amount: adult.amount + 1 });
