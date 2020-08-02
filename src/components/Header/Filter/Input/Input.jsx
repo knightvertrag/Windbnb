@@ -1,20 +1,10 @@
 import React from "react";
 import classes from "./Input.module.scss";
 const Input = ({ type, placeholder }) => {
-  const searchHandler = (e) => {
-    let searchedLocation = e.target.value;
-    console.log(searchedLocation);
-  };
-
   return (
     <div className={classes.container}>
       <div className={classes.txt}>{type}</div>
-      <input
-        type="text"
-        placeholder={placeholder}
-        name="Location"
-        onChange={(e) => searchHandler(e)}
-      />
+      <div className={classes.placeholder}>{placeholder}</div>
     </div>
   );
 };
