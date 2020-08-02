@@ -10,6 +10,10 @@ const App = () => {
   const [child, setChild] = useState({
     amount: 0,
   });
+  const [location, setLocation] = useState({
+    city: "Helinski",
+    country: "Finland",
+  });
   return (
     <div className={classes.content_area}>
       <Header
@@ -17,8 +21,17 @@ const App = () => {
         setAdult={setAdult}
         child={child}
         setChild={setChild}
+        location={location}
+        setLocation={setLocation}
       />
-      <Main />
+      <Main
+        adult={adult}
+        setAdult={setAdult}
+        child={child}
+        setChild={setChild}
+        location={location}
+        setLocation={setLocation}
+      />
     </div>
   );
 };
