@@ -1,9 +1,26 @@
+.adult {
+  font-family: "Mulish";
+  margin-top: 10%;
+
+  .txt {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+
+    color: #000000;
+  }
+  .sub_txt {
+    color: rgb(170, 170, 170);
+  }
+}
+
 .counter {
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 30%;
   justify-content: space-between;
-  border: 1px solid #f3f1f1;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   padding: 15px;
   span {
