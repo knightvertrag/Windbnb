@@ -12,7 +12,12 @@ const App = () => {
   });
   return (
     <div className={classes.content_area}>
-      <Header />
+      <Header
+        adult={adult}
+        setAdult={setAdult}
+        child={child}
+        setChild={setChild}
+      />
       <Main />
     </div>
   );
