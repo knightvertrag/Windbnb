@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import classes from "./Guest.module.scss";
 
 const Guest = ({ adult, setAdult, child, setChild }) => {
@@ -20,7 +20,7 @@ const Guest = ({ adult, setAdult, child, setChild }) => {
   };
 
   return (
-    <div className={classes.container}>
+    <Fragment>
       <div className={classes.adult}>
         <div className={classes.txt}>Adults</div>
         <div className={classes.sub_txt}>Ages 13 and above</div>
@@ -48,7 +48,7 @@ const Guest = ({ adult, setAdult, child, setChild }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
