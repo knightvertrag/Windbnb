@@ -4,7 +4,14 @@ import Logo from "../../assets/logo.svg";
 import { Search } from "./Search/Search";
 import Filter from "./Filter/Filter";
 
-const Header = ({ adult, setAdult, child, setChild }) => {
+const Header = ({
+  adult,
+  setAdult,
+  child,
+  setChild,
+  location,
+  setLocation,
+}) => {
   const [filterShow, setFilterShow] = useState(false);
 
   return (
@@ -16,13 +23,20 @@ const Header = ({ adult, setAdult, child, setChild }) => {
           child={child}
           setChild={setChild}
           setFilterShow={setFilterShow}
+          location={location}
+          setLocation={setLocation}
         />
       ) : (
         ""
       )}
       <div className={classes.header}>
         <img src={Logo} alt="logo" className={classes.logo} />
-        <Search filterShow={filterShow} setFilterShow={setFilterShow} />
+        <Search
+          filterShow={filterShow}
+          setFilterShow={setFilterShow}
+          location={location}
+          setLocation={setLocation}
+        />
       </div>
       <div className={classes.info}>
         <div className={classes.stays}>Stays in Finland</div>
