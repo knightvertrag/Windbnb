@@ -44,7 +44,7 @@ const Header = ({
       </div>
       <div className={classes.info}>
         <div className={classes.stays}>Stays in Finland</div>
-        <div className={classes.amnt}>{location.length}</div>
+        <div className={classes.amnt}>12+ stays</div>
       </div>
     </Fragment>
   );
