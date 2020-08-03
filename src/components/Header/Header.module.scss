@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-  .logo {
-    width: 11rem;
-  }
+.logo {
+  width: 11rem;
 }
 
 .info {
@@ -32,5 +32,22 @@
     font-size: 14px;
     line-height: 17px;
     color: #4f4f4f;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: block;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .logo {
+    width: 7rem;
+    margin-bottom: 7%;
+  }
+  .info {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 7%;
   }
 }

@@ -13,12 +13,16 @@
 }
 @media screen and (max-width: 600px) {
   .body {
-    max-width: 400px;
+    max-width: 80%;
     margin: 0 auto;
     display: grid;
     width: 100%;
     grid-template-columns: 1fr;
     gap: 30px 25px;
+  }
+
+  .container {
+    margin-top: 50px;
   }
 }
 
