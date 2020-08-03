@@ -9,17 +9,33 @@
   animation-name: moveIn;
   animation-duration: 1s;
 
-  .back {
-    color: rgba(235, 87, 87, 0.9);
-    width: fit-content;
-    margin-left: 10%;
-    padding-bottom: 20px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+  &__out {
+    padding-top: 110px;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    animation-name: moveOut;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+  }
 
-    &:hover {
-      transform: scale(1.5);
-    }
+  &__hidden {
+    display: none;
+  }
+}
+.back {
+  color: rgba(235, 87, 87, 0.9);
+  width: fit-content;
+  margin-left: 10%;
+  padding-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.5);
   }
 }
 
@@ -70,8 +86,23 @@
   width: 100%;
   //background: rgba(79, 79, 79, 0.4);
   backdrop-filter: blur(10px);
-  animation-name: blur;
+  animation-name: blurIn;
   animation-duration: 1s;
+
+  &__out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2200px;
+    width: 100%;
+    animation-name: blurOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  &__hidden {
+    display: none;
+  }
 }
 
 @keyframes moveIn {
@@ -85,11 +116,33 @@
   }
 }
 
-@keyframes blur {
+@keyframes moveOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+    display: none;
+  }
+}
+
+@keyframes blurIn {
   0% {
     backdrop-filter: blur(0);
   }
   100% {
     backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes blurOut {
+  0% {
+    backdrop-filter: blur(10px);
+  }
+  100% {
+    backdrop-filter: blur(0);
+    height: 0;
   }
 }
