@@ -6,6 +6,8 @@ export const Search = ({
   setFilterShow,
   location,
   setLocation,
+  adult,
+  child,
 }) => {
   const onClick = () => {
     setFilterShow(true);
@@ -16,7 +18,9 @@ export const Search = ({
       <div
         className={classes.location}
       >{`${location.city}, ${location.country}`}</div>
-      <div className={classes.guest}>Add Guests</div>
+      <div className={classes.guest}>{`Guests: ${
+        adult.amount + child.amount
+      }`}</div>
       <i className={`material-icons ${classes.icon}`} onClick={() => onClick()}>
         search
       </i>
