@@ -1,18 +1,6 @@
 import React from "react";
 import classes from "./StayCard.module.scss";
 
-export const IStay = {
-  city: String,
-  country: String,
-  superHost: Boolean,
-  title: String,
-  rating: Number,
-  maxGuests: Number,
-  type: String,
-  beds: Number | null,
-  photo: String,
-};
-
 const StayCard = ({ stay }) => {
   return (
     <div className={classes.container}>

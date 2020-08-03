@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Main.module.scss";
 import stays from "../../Data/stays.json";
-import StayCard, { IStay } from "../StayCard/StayCard";
+import StayCard from "../StayCard/StayCard";
 
 const Main = ({ location, setLocation, adult, setAdult, child, setChild }) => {
   const filteredStays = stays.filter((item) => {
