@@ -8,12 +8,21 @@ const Main = ({ location, setLocation, adult, setAdult, child, setChild }) => {
     return item.city === location.city && item.country === location.country;
   });
 
+  const renderFilterStays = () => {
+    console.log(filteredStays);
+    return filteredStays.map((stay) => (
+      <StayCard stay={stay} key={stay.title} />
+    ));
+  };
+  const renderStays = () => {
+    console.log(stays);
+    return stays.map((stay) => <StayCard stay={stay} key={stay.title} />);
+  };
+
   return (
     <div className={classes.container}>
       <div className={classes.body}>
-        {filteredStays.map((stay) => (
-          <StayCard stay={stay} key={stay.title} />
-        ))}
+        {filteredStays.length === 0 ? renderStays() : renderFilterStays()}
       </div>
     </div>
   );
