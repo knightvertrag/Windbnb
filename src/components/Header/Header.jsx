@@ -13,22 +13,23 @@ const Header = ({
   setLocation,
 }) => {
   const [filterShow, setFilterShow] = useState(false);
+  const [filterActive, setFilterActive] = useState(false);
 
   return (
     <Fragment>
-      {filterShow ? (
-        <Filter
-          adult={adult}
-          setAdult={setAdult}
-          child={child}
-          setChild={setChild}
-          setFilterShow={setFilterShow}
-          location={location}
-          setLocation={setLocation}
-        />
-      ) : (
-        ""
-      )}
+      <Filter
+        adult={adult}
+        setAdult={setAdult}
+        child={child}
+        setChild={setChild}
+        filterShow={filterShow}
+        setFilterShow={setFilterShow}
+        location={location}
+        setLocation={setLocation}
+        filterActive={filterActive}
+        setFilterActive={setFilterActive}
+      />
+
       <div className={classes.header}>
         <img src={Logo} alt="logo" className={classes.logo} />
         <Search
@@ -38,6 +39,7 @@ const Header = ({
           setLocation={setLocation}
           adult={adult}
           child={child}
+          setFilterActive={setFilterActive}
         />
       </div>
       <div className={classes.info}>

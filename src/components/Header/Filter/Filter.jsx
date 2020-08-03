@@ -7,12 +7,15 @@ import stays from "../../../Data/stays.json";
 
 const Filter = ({
   setFilterShow,
+  filterShow,
   adult,
   setAdult,
   child,
   setChild,
   location,
   setLocation,
+  filterActive,
+  setFilterActive,
 }) => {
   //Remove Duplicates in stays.json
   let filteredstays = stays.map((item) => {
@@ -37,6 +40,26 @@ const Filter = ({
     setLocation(choseLocation);
   };
 
+  const selectFilterClass = () => {
+    if (filterActive) {
+      return classes.container;
+    } else if (!filterShow) {
+      return classes.container__hidden;
+    } else if (!filterActive) {
+      return `${classes.container__out}`;
+    }
+  };
+
+  const selectBackdropClass = () => {
+    if (filterActive) {
+      return classes.backdrop;
+    } else if (!filterShow) {
+      return classes.container__hidden;
+    } else if (!filterActive) {
+      return `${classes.backdrop__out}`;
+    }
+  };
+
   const showLocations = () => {
     return filteredstays.map((item) => {
       return (
@@ -58,10 +81,10 @@ const Filter = ({
 
   return (
     <Fragment>
-      <div className={classes.container}>
+      <div className={selectFilterClass()}>
         <i
           className={`material-icons ${classes.back}`}
-          onClick={() => setFilterShow(false)}
+          onClick={() => setFilterActive(false)}
         >
           arrow_back
         </i>
@@ -86,13 +109,15 @@ const Filter = ({
             />
           </div>
           <div className={classes.btn}>
-            <Button icon={`search`}>Search</Button>
+            <Button icon={`search`} setActiveFilter={setFilterActive}>
+              Search
+            </Button>
           </div>
         </div>
       </div>
       <div
-        className={classes.backdrop}
-        onClick={() => setFilterShow(false)}
+        className={selectBackdropClass()}
+        onClick={() => setFilterActive(false)}
       ></div>
     </Fragment>
   );

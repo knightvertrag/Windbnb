@@ -8,9 +8,11 @@ export const Search = ({
   setLocation,
   adult,
   child,
+  setFilterActive,
 }) => {
   const onClick = () => {
     setFilterShow(true);
+    setFilterActive(true);
   };
 
   return (
