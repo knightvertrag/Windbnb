@@ -32,6 +32,8 @@ const App = () => {
         location={location}
         setLocation={setLocation}
       />
+      <hr />
+      <div className={classes.footer}>knightvertag@Devchallenges.to</div>
     </div>
   );
 };
