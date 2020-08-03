@@ -36,6 +36,8 @@ const Header = ({
           setFilterShow={setFilterShow}
           location={location}
           setLocation={setLocation}
+          adult={adult}
+          child={child}
         />
       </div>
       <div className={classes.info}>

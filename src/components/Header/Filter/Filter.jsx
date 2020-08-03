@@ -74,7 +74,10 @@ const Filter = ({
             {showLocations()}
           </div>
           <div className={classes.guests}>
-            <Input type={`Guests`} placeholder={`Add Guests`} />
+            <Input
+              type={`Guests`}
+              placeholder={`${adult.amount + child.amount}`}
+            />
             <Guest
               adult={adult}
               setAdult={setAdult}
