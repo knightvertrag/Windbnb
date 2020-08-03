@@ -10,8 +10,14 @@
     font-family: "Mulish";
     font-style: normal;
     font-weight: normal;
+    border-radius: 16px 0 0 16px;
     font-size: 14px;
     padding: 20px;
+    cursor: pointer;
+    transition: all 0.1s;
+    &:hover {
+      background-color: rgba(221, 221, 221, 0.4);
+    }
   }
 
   .guest {
@@ -22,6 +28,11 @@
     font-size: 14px;
     padding: 20px;
     color: #bdbdbd;
+    cursor: pointer;
+    transition: all 0.1s;
+    &:hover {
+      background-color: rgba(221, 221, 221, 0.4);
+    }
   }
 
   .icon {
