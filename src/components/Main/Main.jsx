@@ -5,7 +5,11 @@ import StayCard, { IStay } from "../StayCard/StayCard";
 
 const Main = ({ location, setLocation, adult, setAdult, child, setChild }) => {
   const filteredStays = stays.filter((item) => {
-    return item.city === location.city && item.country === location.country;
+    return (
+      item.city === location.city &&
+      item.country === location.country &&
+      item.maxGuests >= adult.amount + child.amount
+    );
   });
 
   const renderFilterStays = () => {
