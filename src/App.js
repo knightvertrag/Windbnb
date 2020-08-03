@@ -11,8 +11,8 @@ const App = () => {
     amount: 0,
   });
   const [location, setLocation] = useState({
-    city: "Helinski",
-    country: "Finland",
+    city: "Add",
+    country: "Location",
   });
   return (
     <div className={classes.content_area}>
