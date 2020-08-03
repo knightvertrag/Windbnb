@@ -33,7 +33,7 @@ const Filter = ({
       country: location.country,
     };
     //return choseLocation;
-    console.log(choseLocation);
+    //console.log(choseLocation);
     setLocation(choseLocation);
   };
 
@@ -67,7 +67,10 @@ const Filter = ({
         </i>
         <div className={classes.categories}>
           <div className={classes.location_container}>
-            <Input type={`Location`} placeholder={`Add Location`} />
+            <Input
+              type={`Location`}
+              placeholder={`${location.city}, ${location.country}`}
+            />
             {showLocations()}
           </div>
           <div className={classes.guests}>
