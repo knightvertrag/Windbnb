@@ -1,23 +1,27 @@
 import React from "react";
 import classes from "./StayCard.module.scss";
 
-const StayCard = ({ stay }) => {
+const StayCard = ({ restaurant }) => {
   return (
     <div className={classes.container}>
-      <img src={stay.photo} alt={stay.title} className={classes.photo} />
+      <img
+        src={restaurant.photo}
+        alt={restaurant.title}
+        className={classes.photo}
+      />
       <div className={classes.body}>
         <div className={classes.description}>
-          {stay.superHost ? <span>Super Host</span> : null}
+          {" "}
           <p>
-            {stay.type}.{stay.beds ? `${stay.beds} beds` : ""}
+            {restaurant.type}
           </p>
         </div>
         <div className={classes.rating}>
           <span className={`material-icons ${classes.rating_icon}`}>grade</span>
-          <span className={classes.rating_value}>{stay.rating}</span>
+          <span className={classes.rating_value}>{restaurant.rating}</span>
         </div>
       </div>
-      <p className={classes.title}>{stay.title}</p>
+      <p className={classes.title}>{restaurant.title}</p>
     </div>
   );
 };
