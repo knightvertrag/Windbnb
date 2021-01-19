@@ -1,12 +1,16 @@
 import React from "react";
 import classes from "./StayCard.module.scss";
 
+const changePage = () => {
+  
+}
+
 const StayCard = ({ restaurant }) => {
   return (
     <div className={classes.container}>
       <img
         src={restaurant.photo}
-        alt={restaurant.title}
+        alt={restaurant.res_id}
         className={classes.photo}
       />
       <div className={classes.body}>
