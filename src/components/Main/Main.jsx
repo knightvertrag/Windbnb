@@ -5,12 +5,15 @@ import { apiService } from "../../api";
 
 const Main = () => {
   const [restaurants, setRestaurant] = useState([]);
+  const [radius, setRadius] = useState(1000);
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log("Latitude is :", position.coords.latitude);
       console.log("Longitude is :", position.coords.longitude);
+      const radius= prompt("Please enter the radius");
+      setRadius(radius);
       apiService
-        .getRestaurants(position.coords.latitude, position.coords.longitude)
+        .getRestaurants(position.coords.latitude, position.coords.longitude, radius)
         .then((res) => {
           var resttotal = [];
           res.data.restaurants.map(function (restaurant) {
