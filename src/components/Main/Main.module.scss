@@ -24,14 +24,27 @@
   .container {
     margin-top: 50px;
   }
+
+  .inputContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .inputArea{
+    max-height: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 
-// @media screen and (min-width: 992px) {
-//   .container {
-//     padding: 20px 40px;
-//   }
+.inputContainer{
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
 
-//   .body {
-//     grid-template-columns: 1fr 1fr 1fr;
-//   }
-// }
+.inputLabel{
+  padding: 10px;
+}
+
