@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    min-height: 75vh;
+    //display: grid;
+  }
+  .body {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 25px;
+  }
+  @media screen and (max-width: 600px) {
+    .body {
+      max-width: 80%;
+      margin: 0 auto;
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr;
+      gap: 30px 25px;
+    }
+  
+    .container {
+      margin-top: 50px;
+    }
+  
+    .inputContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .inputArea{
+      max-height: 10px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+  
+  .inputContainer{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+  
+  .inputLabel{
+    padding: 10px;
+  }
+  
+  
